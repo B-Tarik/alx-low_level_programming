@@ -1,8 +1,10 @@
 #include <stdio.h>
 
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - main block
+ * print lowercase and then uppercase alphabet.
+ * Return: 0
+ */
 int main(void)
 {
     char c;
@@ -12,5 +14,6 @@ int main(void)
     for (c = 'A'; c <= 'Z'; ++c)
         putchar(c);
     putchar('\n');
+    
     return (0);
 }
