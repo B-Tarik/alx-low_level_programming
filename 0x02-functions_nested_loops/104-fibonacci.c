@@ -5,22 +5,22 @@
  */
 int main()
 {
-  int prev = 1, curr = 2;
-  printf("%d, %d, ", prev, curr);
+	int prev = 1, curr = 2;
+	printf("%d, %d, ", prev, curr);
 
-  for (int i = 3; i <= 98; i++)
-  {
-    int next = prev + curr;
-    printf("%d", next);
-    if (i < 98)
-    {
-      printf(", ");
-    }
-    prev = curr;
-    curr = next;
-  }
+	for (int i = 3; i <= 98; i++)
+	{
+		int next = prev + curr;
+		printf("%d", next);
+		if (i < 98)
+		{
+			printf(", ");
+		}
+		prev = curr;
+		curr = next;
+	}
 
-  printf("\n");
+	printf("\n");
 
-  return 0;
+	return 0;
 }
