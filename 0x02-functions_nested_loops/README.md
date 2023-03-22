@@ -1,0 +1,6 @@
+0x02. C - Functions, nested loops
+C
+ By: Julien Barbier
+ Weight: 1
+ Project will start Mar 21, 2023 3:00 AM, must end by Mar 22, 2023 3:00 AM
+ Checker was released at Mar 21, 2023 9:00 AM
