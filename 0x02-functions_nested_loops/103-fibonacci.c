@@ -3,7 +3,7 @@
  * main - fibonacci, prints the sum of the even-valued terms
  * Return: 0 always.
  */
-int main()
+int main(void)
 {
 	int prev = 1, curr = 2, sum = 0;
 
@@ -20,5 +20,5 @@ int main()
 
 	printf("%d\n", sum);
 
-	return 0;
+	return (0);
 }

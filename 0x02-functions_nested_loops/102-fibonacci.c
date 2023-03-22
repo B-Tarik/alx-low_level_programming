@@ -3,7 +3,7 @@
  * main - print first 50 fibonacci
  * Return: 0 always.
  */
-int main()
+int main(void)
 {
 	int fib[50], i;
 
@@ -21,5 +21,5 @@ int main()
 	}
 	printf("%d\n", fib[49]);
 
-	return 0;
+	return (0);
 }
