@@ -5,23 +5,16 @@
  */
 void print_number(int n)
 {
-	int divisor = 1;
-
-	while (n / divisor >= 10 || n / divisor <= -10)
-	{
-		divisor *= 10;
-	}
+	unsigned int num = n;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		num = -num;
 	}
 
-	while (divisor > 0)
-	{
-		_putchar('0' + n / divisor);
-		n %= divisor;
-		divisor /= 10;
-	}
+	if ((num / 10) > 0)
+		print_number(num / 10);
+
+	_putchar((num % 10) + '0');
 }
