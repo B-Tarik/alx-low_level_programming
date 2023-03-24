@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * main - prints largest prime factor.
- * Return: Always 0.
+ * print_number - Prints an integer.
+ * @n: The integer to be printed.
  */
 void print_number(int n)
 {
