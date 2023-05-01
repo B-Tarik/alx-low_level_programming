@@ -1,15 +1,30 @@
 #include "main.h"
 /**
- * _pow_recursion - function that returns the value of x raised to the power of y.
- * @x: int
- * @y: int
- * Return: x power y
+ * prime2
+ * @a:
+ * @b:
+ * Return:
  */
-int _pow_recursion(int x, int y)
+int prime2(int a, int b)
 {
-	if (y < 0)
-		return (-1);
-	if (y == 0)
+	if (a == b)
+	{
 		return (1);
-	return (x * _pow_recursion(x, y - 1));
+	}
+	else if (a % b == 0)
+		return (0);
+	return (prime2(a, b + 1));
+}
+/**
+ * is_prime_number
+ * @n:
+ * Return:
+ */
+int is_prime_number(int n)
+{
+	if (n <= 1)
+	{
+		return (0);
+	}
+	return (prime2(n, 2));
 }

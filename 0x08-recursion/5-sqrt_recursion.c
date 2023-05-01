@@ -1,15 +1,24 @@
 #include "main.h"
 /**
- * _pow_recursion - function that returns the value of x raised to the power of y.
- * @x: int
- * @y: int
- * Return: x power y
+ * sqrt2
+ * @a:
+ * @b:
+ * Return:
  */
-int _pow_recursion(int x, int y)
+int sqrt2(int a, int b)
 {
-	if (y < 0)
+	if (b * b == a)
+		return (b);
+	else if (b * b > a)
 		return (-1);
-	if (y == 0)
-		return (1);
-	return (x * _pow_recursion(x, y - 1));
+	return (sqrt2(a, b + 1));
+}
+/**
+ * _sqrt_recursion
+ * @n:
+ * Return:
+ */
+int _sqrt_recursion(int n)
+{
+	return (sqrt2(n, 1));
 }
