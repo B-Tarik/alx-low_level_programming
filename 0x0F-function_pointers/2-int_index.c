@@ -1,24 +1,26 @@
+#include <stdlib.h>
 #include "function_pointers.h"
-#include <stdio.h>
 /**
- * int_index -
+ * int_index
  * @array:
  * @size:
  * @cmp:
  * Return:
- */
+ **/
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int index;
+	int i;
 
-	if (array == NULL || cmp == NULL)
-		return (-1);
-
-	for (index = 0; index < size; index++)
+	if (size <= 0 || array == NULL || cmp == NULL)
 	{
-		if (cmp(array[index]) != 0)
-			return (index);
+		return (-1);
 	}
-
+	for (i = 0; i < size; i++)
+	{
+		if (cmp(array[i]) != 0)
+		{
+			return (i);
+		}
+	}
 	return (-1);
 }
