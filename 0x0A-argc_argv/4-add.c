@@ -1,22 +1,51 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 /**
- * main - a program that multiplies two arguments passed into it
- * @argc: count
- * @argv: array of pointer
- * Return: 0
- */
+ * num_checker
+ * @a:
+ * Return:
+ **/
+int num_checker(char *a)
+{
+	int i, num, len;
+
+	i = 0;
+	num = 0;
+	len = strlen(a);
+	while (i < len)
+	{
+		if (a[i] > '9' || a[i] < '0')
+		{
+			return (-1);
+		}
+		else
+			num = num * 10 + (a[i] - '0');
+		i++;
+	}
+	return (num);
+}
+/**
+ * main
+ * @argc:
+ * @argv:
+ * Return:
+ **/
 int main(int argc, char *argv[])
 {
-	int m;
+	int i, num, sum;
 
-	if (argc != 3)
+	sum = 0;
+	for (i = 1; i < argc; i++)
 	{
-		printf("Error\n");
-		return (1);
+		num = num_checker(argv[i]);
+		if (num == -1)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		sum += num;
 	}
-	else
-	{
-		m = (atoi(argv[1]) * atoi(argv[2]));
-		printf("%d\n", m);
-	}
+	printf("%d\n", sum);
+	return (0);
 }
