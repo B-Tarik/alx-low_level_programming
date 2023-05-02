@@ -1,17 +1,42 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * free_grid - frees a 2d integer
- * @grid: pointer to array of ints
- * @height: number of rows
- * Return: 0
+ * *argstostr 
+ * @ac: 
+ * @av:
+ * Return: 
  **/
-void free_grid(int **grid, int height)
+char *argstostr(int ac, char **av)
 {
-	int i;
+	char *str;
+	int i, j, k, size;
 
-	for (i = 0; i < height; i++)
-		free(grid[i]);
-
-	free(grid);
+	if (ac == 0 || av == NULL)
+	{
+		return (NULL);
+	}
+	size = 0;
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++)
+			size++;
+		size++;
+	}
+	size++;
+	str = malloc(sizeof(char) * size);
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	k = 0;
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++)
+		{
+			str[k++] = av[i][j];
+		}
+		str[k++] = '\n';
+	}
+	str[k] = '\0';
+	return (str);
 }
